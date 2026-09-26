@@ -19,9 +19,11 @@ export const createTest = (url, options) => createPutoutTest(url, {
     extension: 'css',
     extensionFix: 'css',
     lint,
-    plugins: [['css', {
-        report: noop,
-        replace: noop,
-    }]],
+    plugins: [
+        ['css', {
+            report: noop,
+            replace: noop,
+        }],
+    ],
     ...options,
 });
