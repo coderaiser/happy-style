@@ -34,11 +34,15 @@ test('happy-style: bin: convert: json -> css', (t) => {
         }
     `;
     
-    t.equal(convert(source), `${expected}\n`);
+    const result = convert(source);
+    
+    t.equal(result, `${expected}\n`);
     t.end();
 });
 
 test('happy-style: bin: convert: empty -> empty array', (t) => {
-    t.equal(convert(''), '[];\n');
+    const result = convert('');
+    
+    t.equal(result, '[];\n');
     t.end();
 });
