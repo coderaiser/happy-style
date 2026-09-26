@@ -54,7 +54,7 @@ test('happy-style: convertJsToCss', (t) => {
     t.end();
 });
 
-test('happy-style: roundtrip: rule', (t) => {
+test('happy-style: printCss: rule', (t) => {
     const source = montag`
         .button {
             color: red;
