@@ -133,3 +133,29 @@ test('happy-style: roundtrip: space separated function', (t) => {
     t.equal(result, source);
     t.end();
 });
+
+test('happy-style: roundtrip: space separated function in value list', (t) => {
+    const source = '.hello {\n    box-shadow: 0 -4px 16px rgb(0 0 0 / 20%);\n}\n';
+    const result = convertJsToCss(convertCssToJs(source));
+    
+    t.equal(result, source);
+    t.end();
+});
+
+// a function always prints its arguments the same way: a single space fills
+// every gap, `operator(',')` is what puts a comma in one of them
+test('happy-style: functionValue: arguments are space separated', (t) => {
+    const source = `[declaration('color', functionValue('rgb', [0, 0, 0, operator('/'), percentage(20)]))]`;
+    const result = convertJsToCss(source);
+    
+    t.equal(result, `color: rgb(0 0 0 / 20%);\n`);
+    t.end();
+});
+
+test('happy-style: functionValue: operator puts the comma in place', (t) => {
+    const source = `[declaration('color', functionValue('rgb', [255, operator(','), 0, operator(','), 0]))]`;
+    const result = convertJsToCss(source);
+    
+    t.equal(result, `color: rgb(255, 0, 0);\n`);
+    t.end();
+});

@@ -39,6 +39,13 @@ Happy Style converts CSS to a JavaScript AST and back this way:
 | `@media (min-width: 100px)` | `mediaQuery([...])`                                                        |
 | `@keyframes anim { ... }`   | `keyframes('anim', [ ... ])`                                               |
 
+The arguments of `functionValue` are always printed the same way: a single
+space fills every gap between them, and a comma is an argument of its own, so
+`rgb(255, 0, 0)` is
+`functionValue('rgb', [255, operator(','), 0, operator(','), 0])` while
+`rgb(0 0 0 / 20%)` is
+`functionValue('rgb', [0, 0, 0, operator('/'), percentage(20)])`.
+
 ### API
 
 ```js

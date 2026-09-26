@@ -128,6 +128,43 @@ const cases = [{
     name: 'pseudo-class-empty',
     css: 'a:not() { color: red }',
     expected: 'a:not(){color:red}',
+}, {
+    name: 'function-space',
+    css: '.a { color: rgb(0 0 0 / 20%) }',
+    expected: '.a{color:rgb(0 0 0 / 20%)}',
+}, {
+    name: 'function-comma',
+    css: '.a { color: rgba(0, 0, 0, 0.5) }',
+    expected: '.a{color:rgba(0,0,0,0.5)}',
+}, {
+    // happy-style keeps the space in front of a negative value and the spaces
+    // around `/`, so these differ from the css-tree reference, which minifies
+    // them away — the values themselves are unchanged
+    name: 'function-space-in-value-list',
+    css: '.hello { box-shadow: 0 -4px 16px rgb(0 0 0 / 20%) }',
+    expected: '.hello{box-shadow:0 -4px 16px rgb(0 0 0 / 20%)}',
+}, {
+    // commas and spaces mixed in one function: every gap is an argument
+    // of its own, `operator(',')` for the commas
+    name: 'function-mixed',
+    css: '.a { background: linear-gradient(red 0%, blue 100%) }',
+    expected: '.a{background:linear-gradient(red 0%,blue 100%)}',
+}, {
+    name: 'function-mixed-color-mix',
+    css: '.a { color: color-mix(in srgb, red 50%, blue) }',
+    expected: '.a{color:color-mix(in srgb,red 50%,blue)}',
+}, {
+    name: 'function-mixed-conic',
+    css: '.a { background: conic-gradient(from 45deg, red, blue) }',
+    expected: '.a{background:conic-gradient(from 45deg,red,blue)}',
+}, {
+    name: 'value-list-comma',
+    css: '.a { font-family: Arial, sans-serif }',
+    expected: '.a{font-family:Arial,sans-serif}',
+}, {
+    name: 'value-list-operator',
+    css: '.a { aspect-ratio: 16 / 9 }',
+    expected: '.a{aspect-ratio:16 / 9}',
 }];
 
 // one assertion per test, so a case that throws is reported by supertape with
