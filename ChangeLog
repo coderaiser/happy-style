@@ -1,3 +1,17 @@
+2026.09.27, v1.0.5
+
+fix:
+- 0e86e0a happy-style: get rid of " "
+- 8553493 quotes
+
+feature:
+- ce80a0f selector: pseudo class raw argument
+- 8964475 selector: nesting selector
+- 4a4e23d selector: combinator spacing
+- b78a9a8 value: negative dimension
+- 45e28de test: roundtrip reference
+- 05d8041 quotes: improve
+
 2026.09.26, v1.0.4
 
 fix:
