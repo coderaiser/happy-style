@@ -143,6 +143,7 @@ test('happy-style: roundtrip: space separated function in value list', (t) => {
 });
 
 // a function always prints its arguments the same way: a single space fills
+
 // every gap, `operator(',')` is what puts a comma in one of them
 test('happy-style: functionValue: arguments are space separated', (t) => {
     const source = `[declaration('color', functionValue('rgb', [0, 0, 0, operator('/'), percentage(20)]))]`;
