@@ -206,3 +206,8 @@ test(`happy-style: roundtrip: view-transition`, (t) => {
     t.transform('view-transition');
     t.end();
 });
+
+test(`happy-style: roundtrip: font-palette-values`, (t) => {
+    t.transform('font-palette-values');
+    t.end();
+});
