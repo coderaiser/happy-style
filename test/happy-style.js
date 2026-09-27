@@ -110,6 +110,13 @@ test('happy-style: parseCss: error on unknown node type', (t) => {
     t.end();
 });
 
+test('happy-style: parseCss: error on unsupported @page child', (t) => {
+    const [error] = tryCatch(parseCss, '@page { .foo { color: red } }');
+    
+    t.match(error.message, 'Raw not supported yet in @page');
+    t.end();
+});
+
 test('happy-style: roundtrip: string with backslash', (t) => {
     const source = '.x {\n    content: "C:\\\\path";\n}\n';
     const result = convertJsToCss(convertCssToJs(source));
