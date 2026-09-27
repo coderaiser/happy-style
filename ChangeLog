@@ -1,3 +1,30 @@
+2026.09.27, v1.0.6
+
+fix:
+- f326dc0 happy-style: printer: write-arguments: remove code comment
+- 8500d1f happy-style: printer: is-operator: use isCallExpression
+- 2035868 happy-style: parser: value: remove c8 ignore
+- bf8fee3 happy-style: parser: selector: no optional chaining
+- d8c2125 happy-style: parser: rule: no inline arrow
+- 30fee7a happy-style: parser: atrule: layer statement form
+
+feature:
+- 3a7afb4 happy-style: parser: atrule: page
+- bf69721 happy-style: parser: atrule: namespace
+- b9dc8b5 happy-style: parser: atrule: color-profile
+- d1d586d happy-style: parser: atrule: font-palette-values
+- 34a085c happy-style: parser: atrule: view-transition
+- 09fac33 happy-style: parser: atrule: container
+- 3e3207f happy-style: register counter-style, property, scope, starting-style
+- 91dcc45 happy-style: parser: atrule: starting-style
+- 6eb7771 happy-style: parser: atrule: scope
+- b969d59 happy-style: parser: atrule: property
+- 878803e happy-style: parser: atrule: counter-style
+- 36221ca happy-style: bin: convert: fixtures
+- 6fcf12e happy-style: test: roundtrip fixtures
+- 9d13f79 happy-style: test: create-convert-test
+- 27922b8 happy-style: test: create-roundtrip-test
+
 2026.09.27, v1.0.5
 
 fix:
