@@ -211,3 +211,8 @@ test(`happy-style: roundtrip: font-palette-values`, (t) => {
     t.transform('font-palette-values');
     t.end();
 });
+
+test(`happy-style: roundtrip: color-profile`, (t) => {
+    t.transform('color-profile');
+    t.end();
+});
