@@ -221,3 +221,8 @@ test(`happy-style: roundtrip: namespace`, (t) => {
     t.transform('namespace');
     t.end();
 });
+
+test(`happy-style: roundtrip: page`, (t) => {
+    t.transform('page');
+    t.end();
+});
