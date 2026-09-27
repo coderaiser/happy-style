@@ -216,3 +216,8 @@ test(`happy-style: roundtrip: color-profile`, (t) => {
     t.transform('color-profile');
     t.end();
 });
+
+test(`happy-style: roundtrip: namespace`, (t) => {
+    t.transform('namespace');
+    t.end();
+});
