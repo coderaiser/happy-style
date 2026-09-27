@@ -196,3 +196,8 @@ test(`happy-style: roundtrip: value-list-operator`, (t) => {
     t.transform('value-list-operator');
     t.end();
 });
+
+test(`happy-style: roundtrip: container`, (t) => {
+    t.transform('container');
+    t.end();
+});
