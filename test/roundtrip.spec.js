@@ -201,3 +201,8 @@ test(`happy-style: roundtrip: container`, (t) => {
     t.transform('container');
     t.end();
 });
+
+test(`happy-style: roundtrip: view-transition`, (t) => {
+    t.transform('view-transition');
+    t.end();
+});
