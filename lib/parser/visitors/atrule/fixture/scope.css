@@ -1,0 +1,5 @@
+@scope (.component) {
+    .a {
+        color: red;
+    }
+}
