@@ -1,11 +1,11 @@
 {
-    "rules": {
-        "printer": "on",
-        "putout": "on"
-    },
     "match": {
         "example": {
             "remove-console": "off"
+        },
+        "printer": {
+            "putout": "on",
+            "printer": "on"
         }
     },
     "plugins": ["printer"]
