@@ -1,0 +1,3 @@
+.x {
+    grid-template-columns: [full-start] minmax(1em, 1fr) [full-end];
+}
