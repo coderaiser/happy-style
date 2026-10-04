@@ -1,3 +1,9 @@
+2026.10.04, v1.0.8
+
+feature:
+- 0b52596 happy-style: shorten-get-path
+- c5ce4c5 happy-style: simplify
+
 2026.10.04, v1.0.7
 
 feature:
